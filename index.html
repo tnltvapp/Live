@@ -120,18 +120,17 @@ html {
 
 
 
-<script src= "https://player.twitch.tv/js/embed/v1.js"></script>
-<div id="SamplePlayerDivID"></div>
+<script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+<!-- Create a Twitch.Embed object that will render within the "twitch-embed" root element. -->
+<div align="center" id="twitch-embed"></div>
 <script type="text/javascript">
-  var options = {
-    width: 720,
-    height: 480,
-    channel: "dallas",
-    // only needed if your site is also embedded on embed.example.com and othersite.example.com 
-    parent: ["embed.example.com", "othersite.example.com"]
-  };
-  var player = new Twitch.Player("SamplePlayerDivID", options);
-  player.setVolume(0.5);
+  new Twitch.Embed("twitch-embed", {
+    width: '100%',
+    height: '100%',
+    channel: "tnltvapp",
+    parent: ["cinemaofthedamd.nl/collective/", "www.cinemaofthedamd.nl/collective/", "cinemaofthedamd.nl", "www.cinemaofthedamd.nl"]
+  });
 </script>
 
 
